@@ -36,9 +36,6 @@ def run_code():
     if not request.json.get('code', None):
         return give_error('Must provide "code" key in JSON.')
 
-    if should_be_throttled(request.remote_addr):
-        return give_error('Throttled.')
-
 
     # call and run code
     sandbox = Sandbox(SandboxConfig('interpreter'))
