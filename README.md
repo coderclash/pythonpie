@@ -16,7 +16,7 @@ We run your codes.
 **Make sure redis is installed and running on the standard ports!**
 
 1. `git clone git@github.com:coderclash/pythonpie.git`
-2. `cd emailpie`
-3. `mkvirtualenv pythonpie` or `mkvirtualenv -p /usr/local/bin/pypy pypythonpie` :-)
+2. `cd pythonpie`
+3. `mkvirtualenv pythonpie`
 4. `pip install -r requirements`
 5. `python rundev.py`

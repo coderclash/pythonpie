@@ -1,12 +1,15 @@
-from gevent import monkey
-monkey.patch_all()
-
 import unittest
+import pythonpie
 
 
 class PieParse(unittest.TestCase):
-    def test_thing(self):
-        pass
+    def setUp(self):
+        pythonpie.app.config['TESTING'] = True
+        self.app = pythonpie.app.test_client()
+
+    def test_homepage(self):
+        rv = self.app.get('/')
+        self.assertEquals(200, rv.status_code)
 
 
 if __name__ == '__main__':

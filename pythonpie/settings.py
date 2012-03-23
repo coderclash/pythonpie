@@ -7,6 +7,8 @@ REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 0
 
+PYPY_LOCATION = 'SET ME! CHECK THE README.'
+
 
 try:
     from settings_local import *
