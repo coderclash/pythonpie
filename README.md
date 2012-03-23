@@ -1,12 +1,14 @@
-# A simple sandboxed Python REST & JSON API.
+# PythonPie - A Simple JSON API for Safely Running Python Code.
 
 We run your codes.
+
+** Warning, sandbox not implemented. Trust me. Not good. **
 
 
 ### Features
 
 * Uses gevent for fastness.
-* Sandboxes python
+* Sandboxes python.
 
 
 ### Install/Usage
@@ -15,7 +17,6 @@ We run your codes.
 
 1. `git clone git@github.com:coderclash/pythonpie.git`
 2. `cd emailpie`
-3. `mkvirtualenv pythonpie`
+3. `mkvirtualenv pythonpie` or `mkvirtualenv -p /usr/local/bin/pypy pypythonpie` :-)
 4. `pip install -r requirements`
 5. `python rundev.py`
-6. Visit http://localhost:5000/v1/check?email=test@gmail.com
