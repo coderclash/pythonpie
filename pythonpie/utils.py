@@ -34,7 +34,10 @@ def timeout(func, args=(), kwargs={}, duration=5):
     signal.alarm(duration)
 
     # This open() may hang indefinitely
-    result = func(*args, **kwargs)
+    try:
+        result = func(*args, **kwargs)
+    except Exception, e:
+        return u'{0}: {1}'.format(e.__class__.__name__, e)
 
     signal.alarm(0)
     return result

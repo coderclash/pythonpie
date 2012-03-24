@@ -19,4 +19,5 @@ We run your codes.
 2. `cd pythonpie`
 3. `mkvirtualenv pythonpie`
 4. `pip install -r requirements`
-5. `python rundev.py`
+5. `gunicorn pythonpie:app`
+6. `python tests.py`
