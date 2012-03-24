@@ -2,6 +2,8 @@ import unittest
 import pythonpie
 import simplejson
 
+from datetime import datetime
+
 
 class PieParse(unittest.TestCase):
     def setUp(self):
@@ -24,6 +26,16 @@ class PieParse(unittest.TestCase):
             'print 1+1',
             '2'
         )
+
+    def test_timeout(self):
+        early = datetime.now()
+
+        data = simplejson.dumps({'code': 'while True: print "hey!"'})
+        rv = self.app.post('/v1/python/2.7.1', data=data, content_type='application/json')
+        self.assertEquals(200, rv.status_code)
+
+        lenth = datetime.now() - early
+        self.assertTrue(5 < lenth)
 
 
 if __name__ == '__main__':

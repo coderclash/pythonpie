@@ -17,7 +17,8 @@ $(document).ready(function() {
       contentType: "application/json; charset=utf-8",
       success: function(data, textStatus, jqXHR) {
         console.log(data, textStatus, jqXHR);
-        return $('.results').text(data.results);
+        console.log(data.results);
+        return $('#results').text(data.results);
       }
     });
   });

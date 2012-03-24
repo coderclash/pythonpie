@@ -13,4 +13,5 @@ $(document).ready ->
       contentType: "application/json; charset=utf-8",
       success: (data, textStatus, jqXHR) ->
         console.log data, textStatus, jqXHR
-        $('.results').text data.results
+        console.log data.results
+        $('#results').text data.results
