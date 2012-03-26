@@ -19,5 +19,5 @@ We run your codes.
 2. `cd pythonpie`
 3. `mkvirtualenv pythonpie`
 4. `pip install -r requirements`
-5. `gunicorn pythonpie:app`
+5. `gunicorn pythonpie:app -b 127.0.0.1:5000`
 6. `python tests.py`
